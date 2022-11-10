@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div style="display: flex">
+        <div style="max-width: 400px; margin-top: 30px" class="card">
+          <% if (error) { %>
+            <ul style="color: red;">
+              <% error.split(",").forEach((el) => { %>
+                <li><%= el %></li>
+              <% }) %>
+            </ul>
+          <% } %>
+          <div style="margin: 20px">
+            <form action="/register" method="post">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  placeholder="Name"
+                />
+              </div>
+              <div style="display: flex; gap: 15px">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Gender</label
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    name="gender"
+                  >
+                    <option selected>Choose one</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Age</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="age"
+                    placeholder="Age"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Url Image</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  name="picture"
+                  placeholder="Url Image"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  id="founderName"
+                  placeholder="password"
+                />
+              </div>
+              <div class="mb-3">
+                <div class="align-content-end col-auto">
+                  <button type="submit" class="btn btn-primary mb-3">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+[
+    {
+        "name" : "Super Admin",
+        "picture" : "asdasd",
+        "UserId" : 1,
+        "age" : 100,
+        "gender" : "Male"
+    }
+]
